@@ -1,0 +1,176 @@
+/* ===== Philshed Learning Center - shared styles =====
+   CSS variables (the --name things) let you change a colour once
+   and it updates everywhere. Edit them here. */
+:root {
+  --navy: #14285a;
+  --navy-deep: #0d1b3f;
+  --pink: #e8407f;
+  --yellow: #ffc933;
+  --cream: #fffaf0;
+  --ink: #1d2433;
+  --muted: #5b647a;
+  --radius: 18px;
+  --shadow: 0 10px 30px rgba(20, 40, 90, 0.12);
+  --font-body: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  --font-display: Georgia, "Times New Roman", serif;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--font-body);
+  color: var(--ink);
+  background: var(--cream);
+  line-height: 1.65;
+}
+img { max-width: 100%; display: block; }
+a { color: var(--navy); }
+h1, h2, h3 { font-family: var(--font-display); line-height: 1.2; color: var(--navy); }
+h1 { font-size: clamp(2.1rem, 6vw, 3.6rem); }
+h2 { font-size: clamp(1.6rem, 4vw, 2.3rem); margin-bottom: .6rem; }
+h3 { font-size: 1.25rem; margin-bottom: .4rem; }
+.container { width: min(1100px, 92%); margin-inline: auto; }
+.section { padding: 4.5rem 0; }
+.eyebrow {
+  display: inline-block; font-weight: 700; letter-spacing: .12em;
+  text-transform: uppercase; font-size: .8rem; color: var(--pink); margin-bottom: .6rem;
+}
+
+/* Skip link: helps keyboard and screen-reader users jump past the menu */
+.skip { position: absolute; left: -999px; }
+.skip:focus { left: 1rem; top: 1rem; background: var(--yellow); padding: .5rem 1rem; z-index: 99; }
+
+/* ===== Header / nav ===== */
+.site-header {
+  position: sticky; top: 0; z-index: 50;
+  background: rgba(255, 250, 240, .96); backdrop-filter: blur(8px);
+  border-bottom: 3px solid var(--yellow);
+}
+.nav { display: flex; align-items: center; justify-content: space-between; padding: .7rem 0; }
+.brand { display: flex; align-items: center; gap: .7rem; text-decoration: none; }
+.brand img { width: 46px; height: 46px; object-fit: contain; }
+.brand span { font-family: var(--font-display); font-weight: 700; color: var(--navy); font-size: 1.05rem; line-height: 1.1; }
+.nav ul { list-style: none; display: flex; gap: .4rem; }
+.nav ul a {
+  text-decoration: none; font-weight: 600; padding: .5rem .9rem;
+  border-radius: 999px; color: var(--navy); transition: background .2s;
+}
+.nav ul a:hover, .nav ul a[aria-current="page"] { background: var(--yellow); }
+.menu-btn { display: none; background: var(--navy); color: #fff; border: 0; border-radius: 10px; padding: .5rem .8rem; font-size: 1rem; cursor: pointer; }
+
+@media (max-width: 720px) {
+  .menu-btn { display: block; }
+  .nav ul {
+    display: none; position: absolute; left: 0; right: 0; top: 100%;
+    flex-direction: column; background: var(--cream); padding: .8rem 4%;
+    border-bottom: 3px solid var(--yellow);
+  }
+  .nav ul.open { display: flex; }
+}
+
+/* ===== Buttons ===== */
+.btn {
+  display: inline-block; text-decoration: none; font-weight: 700;
+  padding: .85rem 1.6rem; border-radius: 999px; border: 0; cursor: pointer;
+  font-size: 1rem; transition: transform .15s, box-shadow .15s;
+}
+.btn:hover { transform: translateY(-2px); box-shadow: var(--shadow); }
+.btn-primary { background: var(--pink); color: #fff; }
+.btn-ghost { background: transparent; color: #fff; border: 2px solid rgba(255,255,255,.7); }
+
+/* ===== Hero ===== */
+.hero {
+  position: relative; overflow: hidden; color: #fff;
+  background: radial-gradient(circle at 80% 20%, #23418a 0%, var(--navy) 45%, var(--navy-deep) 100%);
+  padding: 5rem 0 7rem;
+}
+.hero h1 { color: #fff; max-width: 14ch; }
+.hero h1 em { font-style: normal; color: var(--yellow); }
+.hero p { max-width: 52ch; margin: 1.2rem 0 2rem; color: #dbe3ff; font-size: 1.1rem; }
+.hero .actions { display: flex; flex-wrap: wrap; gap: .8rem; }
+/* decorative shapes drawn with pure CSS: zero image weight */
+.hero::before, .hero::after { content: ""; position: absolute; border-radius: 50%; }
+.hero::before { width: 320px; height: 320px; background: var(--pink); opacity: .18; right: -80px; top: -60px; }
+.hero::after { width: 160px; height: 160px; background: var(--yellow); opacity: .9; right: 12%; bottom: 40px; }
+.hero .wave { position: absolute; bottom: -1px; left: 0; width: 100%; height: 70px; }
+
+/* ===== Cards & grids ===== */
+.grid { display: grid; gap: 1.4rem; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); margin-top: 2rem; }
+.card {
+  background: #fff; border-radius: var(--radius); padding: 1.6rem;
+  box-shadow: var(--shadow); border-top: 6px solid var(--yellow);
+}
+.card:nth-child(2n) { border-top-color: var(--pink); }
+.card:nth-child(3n) { border-top-color: var(--navy); }
+.card p { color: var(--muted); }
+/* photo cards */
+.photo-card {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background-size: cover;
+  background-position: center;
+}
+.photo-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(
+    180deg,
+    rgba(13, 27, 63, 0) 0%,
+    rgba(13, 27, 63, 0) 50%,
+    rgba(13, 27, 63, 0.8) 100%
+  );
+}
+.photo-card h3,
+.photo-card p { color: #fff; }
+
+.split { display: grid; gap: 2.5rem; grid-template-columns: 1fr; align-items: center; }
+@media (min-width: 820px) { .split { grid-template-columns: 1.1fr .9fr; } }
+.panel {
+  background: var(--navy); color: #fff; border-radius: var(--radius);
+  padding: 2rem; box-shadow: var(--shadow);
+}
+.panel h3 { color: var(--yellow); }
+.panel p { color: #dbe3ff; }
+.stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; text-align: center; margin-top: 1.5rem; }
+.stats strong { display: block; font-family: var(--font-display); font-size: 2rem; color: var(--yellow); }
+.stats span { font-size: .85rem; color: #dbe3ff; }
+
+.banner { background: var(--yellow); text-align: center; padding: 3rem 0; }
+.banner h2 { margin-bottom: 1rem; }
+
+/* ===== Page title strip (About, Contact) ===== */
+.page-title { background: var(--navy); color: #fff; padding: 3.5rem 0; border-bottom: 6px solid var(--pink); }
+.page-title h1 { color: #fff; }
+.page-title p { color: #dbe3ff; margin-top: .5rem; }
+
+/* ===== Contact ===== */
+.contact-list { list-style: none; display: grid; gap: 1rem; margin: 1.2rem 0; }
+.contact-list li { display: flex; gap: .8rem; align-items: flex-start; }
+.contact-list .ic { background: var(--yellow); border-radius: 50%; width: 40px; height: 40px; display: grid; place-items: center; flex: none; }
+form { display: grid; gap: 1rem; }
+label { font-weight: 600; font-size: .95rem; }
+input, textarea {
+  width: 100%; padding: .8rem 1rem; border-radius: 12px;
+  border: 2px solid #d9dff0; font: inherit; background: #fff;
+}
+input:focus, textarea:focus { outline: 3px solid var(--yellow); border-color: var(--navy); }
+.map { border: 0; width: 100%; height: 360px; border-radius: var(--radius); box-shadow: var(--shadow); margin-top: 2rem; background: #e9edf8; }
+
+/* ===== Footer ===== */
+.site-footer { background: var(--navy-deep); color: #c7d2f5; padding: 2.5rem 0 1.5rem; }
+.site-footer .cols { display: grid; gap: 1.5rem; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+.site-footer h3 { color: var(--yellow); font-size: 1.05rem; }
+.site-footer a { color: #fff; }
+.site-footer .copy { margin-top: 2rem; font-size: .85rem; border-top: 1px solid rgba(255,255,255,.15); padding-top: 1rem; }
+
+/* Gentle fade-in when sections scroll into view (script.js adds .show) */
+.reveal { opacity: 0; transform: translateY(18px); transition: opacity .6s, transform .6s; }
+.reveal.show { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } html { scroll-behavior: auto; } }
