@@ -60,9 +60,7 @@
 <p><a href="https://www.google.com/maps/dir/?api=1&destination=-3.393944,38.590361">Get directions</a></p>
         </div>
 
-        <!-- This form opens the visitor's email app with the message filled in.
-             It needs no server, so it is free and works on GitHub Pages.
-             Later you can swap it for Formspree (free plan) to receive messages directly. -->
+        <!-- Contact form: sends through Web3forms to the schools inbox. -->
       <form class="card reveal" id="contact-form" action="https://api.web3forms.com/submit" method="POST" aria-label="Contact form">
   <input type="hidden" name="access_key" value="4ef54dd1-8f3a-44dd-9311-b063e5ee3ca8">
   <input type="hidden" name="subject" value="New enquiry from Philshed website">
@@ -91,5 +89,14 @@
     </div>
   </footer>
   <script src="script.js" defer></script>
+  <a class="wa-btn"
+   href="https://wa.me/254729773501?text=Hello%20Philshed%20Learning%20Center%2C%20I%20would%20like%20to%20make%20an%20enquiry."
+   target="_blank" rel="noopener"
+   aria-label="Chat with Philshed Learning Center on WhatsApp">
+  <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true">
+    <path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2z"/>
+  </svg>
+  <span>Chat with us</span>
+</a>
 </body>
 </html>
