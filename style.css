@@ -174,3 +174,12 @@ input:focus, textarea:focus { outline: 3px solid var(--yellow); border-color: va
 .reveal { opacity: 0; transform: translateY(18px); transition: opacity .6s, transform .6s; }
 .reveal.show { opacity: 1; transform: none; }
 @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } html { scroll-behavior: auto; } }
+/* keep the decorative circles BEHIND the hero content */
+.hero::before,
+.hero::after { z-index: 0; pointer-events: none; }
+.hero > *:not(.wave) { position: relative; z-index: 1; }
+
+/* on phones, move the yellow dot away from the buttons */
+@media (max-width: 720px) {
+  .hero::after { width: 90px; height: 90px; top: 1.5rem; right: -30px; bottom: auto; left: auto; }
+}
