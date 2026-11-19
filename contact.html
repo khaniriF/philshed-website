@@ -3,100 +3,71 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Contact &amp; Location | Philshed Learning Center, Voi</title>
-  <meta name="description" content="Contact Philshed Learning Center in Voi. Find our phone number, email, address and map, or send us a message.">
-  <link rel="canonical" href="https://www.YOUR-DOMAIN.co.ke/contact.html">
   <meta name="theme-color" content="#14285a">
+  <title>Contact & Location | Philshed Learning Center, Voi</title>
+  <meta name="description" content="Contact Philshed Learning Center in Voi. Find our phone number, email and location, get directions or send the school an enquiry.">
+  <link rel="canonical" href="https://khanirif.github.io/philshed-website/contact.html">
   <link rel="icon" href="images/logo.png">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
-
   <header class="site-header">
     <div class="container nav">
-      <a class="brand" href="index.html">
-        <img src="images/logo.png" alt="Philshed Learning Center logo" width="46" height="46">
-        <span>Philshed<br>Learning Center</span>
-      </a>
-      <button class="menu-btn" aria-label="Open menu" aria-expanded="false">Menu</button>
-      <ul id="menu">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html" aria-current="page">Contact</a></li>
-      </ul>
+      <a class="brand" href="index.html" aria-label="Philshed Learning Center home"><img src="images/logo.png" alt="" width="46" height="46"><span>Philshed<br>Learning Center</span></a>
+      <button class="menu-btn" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="menu">Menu</button>
+      <nav aria-label="Main navigation"><ul id="menu">
+        <li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="contact.html" aria-current="page">Contact</a></li>
+      </ul></nav>
     </div>
   </header>
 
   <main id="main">
-    <section class="page-title">
-      <div class="container">
-        <h1>Get in touch</h1>
-        <p>We would love to hear from you.</p>
-      </div>
-    </section>
+    <section class="page-title"><div class="container"><span class="eyebrow">We are here to help</span><h1>Let's get in touch</h1><p>Have a question about Philshed? Send us an enquiry or come visit us.</p></div></section>
 
     <section class="section">
-      <div class="container split">
-        <div class="reveal">
-          <span class="eyebrow">Find us</span>
-          <h2>Visit or call</h2>
+      <div class="container contact-layout">
+        <div class="contact-details reveal">
+          <span class="eyebrow">Find the school</span>
+          <h2>Visit or talk to us</h2>
           <ul class="contact-list">
-            <li><span class="ic" aria-hidden="true">📍</span><div><strong>Address</strong><br>Mazeras, Voi, Kenya</div></li>
-            <li><span class="ic" aria-hidden="true">📞</span><div><strong>Phone</strong><br><a href="tel:+254729773501">+254 729 773 501</a></div></li>
-            <li><span class="ic" aria-hidden="true">✉️</span><div><strong>Email</strong><br><a href="mailto:philshedlearningcenter1@gmail.com">philshedlearningcenter1@gmail.com</a></div></li>
+            <li><span class="ic" aria-hidden="true">⌖</span><div><strong>Address</strong><br>Mazeras, Voi, Kenya</div></li>
+            <li><span class="ic" aria-hidden="true">☎</span><div><strong>Phone</strong><br><a href="tel:+254729773501">+254 729 773 501</a></div></li>
+            <li><span class="ic" aria-hidden="true">✉</span><div><strong>Email</strong><br><a href="mailto:philshedlearningcenter1@gmail.com">philshedlearningcenter1@gmail.com</a></div></li>
           </ul>
           <div class="map">
-  <iframe
-    src="https://www.google.com/maps?q=-3.393944,38.590361&z=16&output=embed"
-    title="Map showing Philshed Learning Center"
-    loading="lazy"
-    width="100%"
-    height="300"
-    style="border:0; border-radius:12px;">
-  </iframe>
-</div>
-
-<p><a href="https://www.google.com/maps/dir/?api=1&destination=-3.393944,38.590361">Get directions</a></p>
+            <iframe src="https://www.google.com/maps?q=-3.393944,38.590361&z=16&output=embed" title="Map showing Philshed Learning Center in Voi" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+          <a class="text-link" href="https://www.google.com/maps/dir/?api=1&destination=-3.393944,38.590361" target="_blank" rel="noopener noreferrer">Get directions <span aria-hidden="true">→</span></a>
         </div>
 
-        <!-- Contact form: sends through Web3forms to the schools inbox. -->
-      <form class="card reveal" id="contact-form" action="https://api.web3forms.com/submit" method="POST" aria-label="Contact form">
-  <input type="hidden" name="access_key" value="4ef54dd1-8f3a-44dd-9311-b063e5ee3ca8">
-  <input type="hidden" name="subject" value="New enquiry from Philshed website">
-  <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
-
-  <h3>Send us a message</h3>
-  <div><label for="name">Your name</label><input id="name" name="name" required autocomplete="name"></div>
-  <div><label for="email">Your email</label><input id="email" name="email" type="email" required autocomplete="email"></div>
-  <div><label for="msg">Message</label><textarea id="msg" name="message" rows="4" required></textarea></div>
-  <button class="btn btn-primary" type="submit">Send message</button>
-  <p id="form-status" role="status"></p>
-</form>
-
-      
+        <form class="card contact-form reveal" id="contact-form" action="https://api.web3forms.com/submit" method="POST" aria-label="Send an enquiry to Philshed Learning Center">
+          <span class="eyebrow">Send an enquiry</span>
+          <h2>How can we help?</h2>
+          <input type="hidden" name="access_key" value="4ef54dd1-8f3a-44dd-9311-b063e5ee3ca8">
+          <input type="hidden" name="subject" value="New enquiry from Philshed website">
+          <input type="checkbox" name="botcheck" class="botcheck" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <div><label for="name">Your name</label><input id="name" name="name" type="text" autocomplete="name" placeholder="Enter your name" required></div>
+          <div><label for="email">Email address</label><input id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required></div>
+          <div><label for="msg">Your message</label><textarea id="msg" name="message" rows="5" placeholder="How can the school assist you?" required></textarea></div>
+          <button class="btn btn-primary form-submit" type="submit">Send message</button>
+          <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
+          <p class="form-note">Your message will be sent to the school for follow-up.</p>
+        </form>
+      </div>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="container">
-      <div class="cols">
-        <div><h3>Philshed Learning Center</h3><p>Strong Foundation for a Brighter Future</p></div>
-        <div><h3>Visit</h3><p>P.O. Box 418-80300 Mazeras, Voi, Kenya</p></div>
-        <div><h3>Contact</h3><p>+254 729 773 501<br>philshedlearningcenter1@gmail.com</p></div>
-      </div>
-      <p class="copy">&copy; <span id="year">2026</span> Philshed Learning Center. All rights reserved.</p>
+  <footer class="site-footer"><div class="container">
+    <div class="footer-cols">
+      <div><h3>Philshed Learning Center</h3><p>Strong Foundation for a Brighter Future.</p></div>
+      <div><h3>Find us</h3><p>P.O. Box 418-80300<br>Mazeras, Voi, Kenya</p></div>
+      <div><h3>Talk to us</h3><p><a href="tel:+254729773501">+254 729 773 501</a><br><a href="mailto:philshedlearningcenter1@gmail.com">philshedlearningcenter1@gmail.com</a></p></div>
     </div>
-  </footer>
+    <p class="copy">© <span id="year"></span> Philshed Learning Center. All rights reserved.</p>
+  </div></footer>
+
+  <a class="wa-btn" href="https://wa.me/254729773501?text=Hello%20Philshed%20Learning%20Center%2C%20I%20would%20like%20to%20make%20an%20enquiry." target="_blank" rel="noopener noreferrer" aria-label="Chat with Philshed Learning Center on WhatsApp"><span aria-hidden="true">◉</span><span>Chat with us</span></a>
   <script src="script.js" defer></script>
-  <a class="wa-btn"
-   href="https://wa.me/254729773501?text=Hello%20Philshed%20Learning%20Center%2C%20I%20would%20like%20to%20make%20an%20enquiry."
-   target="_blank" rel="noopener"
-   aria-label="Chat with Philshed Learning Center on WhatsApp">
-  <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true">
-    <path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2z"/>
-  </svg>
-  <span>Chat with us</span>
-</a>
 </body>
 </html>

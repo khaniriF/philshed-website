@@ -3,29 +3,34 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- SEO: the title and description are what Google shows in search results -->
-  <title>Philshed Learning Center | Primary School in Voi, Kenya</title>
-  <meta name="description" content="Philshed Learning Center in Voi teaches PP1 to Grade 6 with caring teachers and a strong foundation for a brighter future. Visit us or get in touch.">
-  <link rel="canonical" href="https://khanirif.github.io/philshed-website/">
-  <meta property="og:title" content="Philshed Learning Center, Voi">
-  <meta property="og:description" content="Strong Foundation for a Brighter Future. PP1 to Grade 6.">
-  <meta property="og:type" content="website">
   <meta name="theme-color" content="#14285a">
+  <title>Philshed Learning Center | Primary School in Voi, Kenya</title>
+  <meta name="description" content="Discover Philshed Learning Center in Voi, Kenya. We provide learning from PP1 to Grade 6, with the CBE curriculum, French, ICT, music and the arts.">
+  <link rel="canonical" href="https://khanirif.github.io/philshed-website/">
+  <meta property="og:title" content="Philshed Learning Center | Voi, Kenya">
+  <meta property="og:description" content="Strong Foundation for a Brighter Future. Learning from PP1 to Grade 6.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://khanirif.github.io/philshed-website/">
   <meta property="og:image" content="https://khanirif.github.io/philshed-website/images/logo.png">
   <link rel="icon" href="images/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="stylesheet" href="style.css">
-
-  <!-- Structured data: a small block that tells Google "this is a school" -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "School",
     "name": "Philshed Learning Center",
     "slogan": "Strong Foundation for a Brighter Future",
-    "url": "https://www.YOUR-DOMAIN.co.ke/",
-    "logo": "https://www.YOUR-DOMAIN.co.ke/images/logo.png",
-    "telephone": "+254-XXX-XXXXXX",
-    "address": { "@type": "PostalAddress", "addressLocality": "Voi", "addressCountry": "KE" }
+    "url": "https://khanirif.github.io/philshed-website/",
+    "logo": "https://khanirif.github.io/philshed-website/images/logo.png",
+    "telephone": "+254729773501",
+    "email": "philshedlearningcenter1@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Voi",
+      "addressRegion": "Taita-Taveta",
+      "addressCountry": "KE"
+    }
   }
   </script>
 </head>
@@ -34,30 +39,40 @@
 
   <header class="site-header">
     <div class="container nav">
-      <a class="brand" href="index.html">
-        <img src="images/logo.png" alt="Philshed Learning Center logo" width="46" height="46">
+      <a class="brand" href="index.html" aria-label="Philshed Learning Center home">
+        <img src="images/logo.png" alt="" width="46" height="46">
         <span>Philshed<br>Learning Center</span>
       </a>
-      <button class="menu-btn" aria-label="Open menu" aria-expanded="false">Menu</button>
-      <ul id="menu">
-        <li><a href="index.html" aria-current="page">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
+      <button class="menu-btn" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="menu">Menu</button>
+      <nav aria-label="Main navigation">
+        <ul id="menu">
+          <li><a href="index.html" aria-current="page">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
     </div>
   </header>
 
   <main id="main">
     <section class="hero">
-      <div class="container">
-        <span class="eyebrow" style="color:var(--yellow)">Voi &middot; PP1 to Grade 6</span>
-        <h1>A <em>strong foundation</em> for a brighter future</h1>
-        <p>Founded in 2014 in Voi, Philshed Learning Center gives children from PP1 to Grade 6 a strong foundation, in the classroom, on the music stage and in the skills of tomorrow.</p>
-        <div class="actions">
-          <a class="btn btn-primary" href="contact.html">Visit or enquire</a>
-          <a class="btn btn-ghost" href="about.html">About our school</a>
-     
+      <div class="container hero-layout">
+        <div class="hero-copy">
+          <span class="eyebrow hero-eyebrow">Voi, Kenya <span aria-hidden="true">•</span> PP1 to Grade 6</span>
+          <h1>A <em>strong foundation</em> for a brighter future</h1>
+          <p>Since 2014, Philshed Learning Center has been helping young learners grow through the CBE curriculum, creativity and skills for tomorrow.</p>
+          <div class="actions">
+            <a class="btn btn-primary" href="contact.html">Enquire about the school</a>
+            <a class="btn btn-ghost" href="about.html">Discover Philshed</a>
+          </div>
         </div>
+        <aside class="hero-highlight" aria-label="School highlights">
+          <span class="highlight-label">Growing together since</span>
+          <strong>2014</strong>
+          <span class="highlight-rule"></span>
+          <p>Building confidence, curiosity and a love of learning.</p>
+          <div class="highlight-tags"><span>Learning</span><span>Creativity</span><span>Character</span></div>
+        </aside>
       </div>
       <svg class="wave" viewBox="0 0 1200 70" preserveAspectRatio="none" aria-hidden="true">
         <path d="M0,40 C200,90 400,0 650,35 C900,70 1050,10 1200,40 L1200,70 L0,70 Z" fill="#fffaf0"/>
@@ -66,40 +81,71 @@
 
     <section class="section">
       <div class="container reveal">
-        <span class="eyebrow">Why families choose us</span>
-        <h2>Learning that feels like home</h2>
-        <div class="grid">
-          <article class="card"><div class="card photo-card" style="background-image: url('images/academics.webp');"></div><h3>Strong academics</h3><p>We follow the CBE curriculum from PP1 to Grade 6, and add French and ICT so learners gain skills beyond the basics.</p></article>
-<article class="card"><div class="card photo-card reveal" style="background-image: url('images/teachers.webp');"></div><h3>Caring teachers</h3><p>Our teachers guide each child with patience, from the first day in PP1 right through to Grade 6.</p></article>
-<article class="card"><div class="card photo-card reveal" style="background-image: url('images/values.webp');"></div><h3>Values and growth</h3><p>Beyond the classroom, learners grow through music and the arts. In 2026 our school reached the Nationals at the music festival.</p></article>
+        <span class="eyebrow">The Philshed experience</span>
+        <h2>Learning that prepares children for tomorrow</h2>
+        <p class="section-intro">A supportive learning environment where children can build knowledge, discover their interests and develop important life skills.</p>
+        <div class="grid feature-grid">
+          <article class="card feature-card">
+            <div class="feature-visual feature-academics" aria-hidden="true"><span>01</span><strong>Learn</strong></div>
+            <h3>Strong academics</h3>
+            <p>Learning from PP1 to Grade 6 under the Competency-Based Education (CBE) curriculum.</p>
+          </article>
+          <article class="card feature-card">
+            <div class="feature-visual feature-skills" aria-hidden="true"><span>02</span><strong>Explore</strong></div>
+            <h3>Skills for the future</h3>
+            <p>Learners also study French and ICT, helping them explore new interests and abilities.</p>
+          </article>
+          <article class="card feature-card">
+            <div class="feature-visual feature-talent" aria-hidden="true"><span>03</span><strong>Shine</strong></div>
+            <h3>Talent and creativity</h3>
+            <p>Music and the arts give learners opportunities to express themselves and celebrate their talents.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-soft">
+      <div class="container split reveal">
+        <div>
+          <span class="eyebrow">A little about us</span>
+          <h2>Rooted in Voi. Focused on every child's future.</h2>
+          <p>Founded by Phidilia Mwahe in 2014, Philshed Learning Center is built around one belief: a strong start can shape a brighter future.</p>
+          <p class="spaced-copy">From the first steps in PP1 to the next stage after Grade 6, we want every learner to grow in knowledge, confidence and character.</p>
+          <a class="text-link" href="about.html">Read our story <span aria-hidden="true">→</span></a>
+        </div>
+        <aside class="achievement-card">
+          <span class="achievement-kicker">A moment to celebrate</span>
+          <strong>Nationals</strong>
+          <p>In 2026, Philshed learners reached the Nationals at the music festival.</p>
+          <span class="achievement-year">2026 Music Festival</span>
+        </aside>
+      </div>
+    </section>
 
     <section class="banner">
       <div class="container reveal">
-        <h2>Come and see Philshed for yourself</h2>
-        <a class="btn" style="background:var(--navy);color:#fff" href="contact.html">Find us in Voi</a>
+        <span class="eyebrow">Your next step starts here</span>
+        <h2>Come and learn more about Philshed</h2>
+        <p>Speak to the school about learning at Philshed Learning Center.</p>
+        <a class="btn banner-btn" href="contact.html">Contact the school</a>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="container">
-      <div class="cols">
-        <div><h3>Philshed Learning Center</h3><p>Strong Foundation for a Brighter Future</p></div>
-        <div><h3>Visit</h3><p>P.O. Box 418-80300<br>Mazeras, Voi, Kenya</p></div>
-        <div><h3>Contact</h3><p><a href="tel:+254729773501">+254 729 773 501</a><br><a href="mailto:philshedlearningcenter1@gmail.com">philshedlearningcenter1@gmail.com</a></p></div>
+      <div class="footer-cols">
+        <div><h3>Philshed Learning Center</h3><p>Strong Foundation for a Brighter Future.</p></div>
+        <div><h3>Find us</h3><p>P.O. Box 418-80300<br>Mazeras, Voi, Kenya</p></div>
+        <div><h3>Talk to us</h3><p><a href="tel:+254729773501">+254 729 773 501</a><br><a href="mailto:philshedlearningcenter1@gmail.com">philshedlearningcenter1@gmail.com</a></p></div>
       </div>
-      <p class="copy">&copy; <span id="year">2026</span> Philshed Learning Center. All rights reserved.</p>
+      <p class="copy">© <span id="year"></span> Philshed Learning Center. All rights reserved.</p>
     </div>
   </footer>
+
+  <a class="wa-btn" href="https://wa.me/254729773501?text=Hello%20Philshed%20Learning%20Center%2C%20I%20would%20like%20to%20make%20an%20enquiry." target="_blank" rel="noopener noreferrer" aria-label="Chat with Philshed Learning Center on WhatsApp">
+    <span aria-hidden="true">◉</span><span>Chat with us</span>
+  </a>
   <script src="script.js" defer></script>
-  <a class="wa-btn"
-   href="https://wa.me/254729773501?text=Hello%20Philshed%20Learning%20Center%2C%20I%20would%20like%20to%20make%20an%20enquiry."
-   target="_blank" rel="noopener"
-   aria-label="Chat with Philshed Learning Center on WhatsApp">
-  <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true">
-    <path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2z"/>
-  </svg>
-  <span>Chat with us</span>
-</a>
 </body>
 </html>
